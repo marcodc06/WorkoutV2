@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleH.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fitness Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Workouts</a></li>
+                    <li><a href="#">Calculators</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="bmiCalculator" class="calculator">
+        <div class="container">
+            <h2>BMI Calculator</h2>
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="Height"><br>
+            <select id="heightUnit">
+                <option value="cm">cm</option>
+                <option value="inches">inches</option>
+            </select><br>
+
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" placeholder="Weight"><br>
+            <select id="weightUnit">
+                <option value="kg">kg</option>
+                <option value="pounds">pounds</option>
+            </select><br>
+
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <p id="bmiResult"></p>
+        </div>
+    </section>
+
+    <section id="bmiInfo">
+        <div class="container">
+            <h2>About BMI</h2>
+            <p>Body Mass Index (BMI) is a measure of body fat based on height and weight. It is commonly used to assess whether someone has a healthy body weight for their height. BMI is calculated by dividing weight in kilograms by the square of height in meters (BMI = weight / (height * height)).</p>
+            <p>Healthy BMI ranges:</p>
+            <ul>
+                <li>Underweight: BMI less than 18.5</li>
+                <li>Normal weight: BMI 18.5 - 24.9</li>
+                <li>Overweight: BMI 25 - 29.9</li>
+                <li>Obesity: BMI 30 or greater</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
