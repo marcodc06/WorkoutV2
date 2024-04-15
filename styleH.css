@@ -51,3 +51,36 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
+/* CSS for workouts page */
+#workouts-container .muscle-group {
+    margin-bottom: 30px;
+}
+
+#workouts-container h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#workouts-container .exercise {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#workouts-container .exercise h4 {
+    margin-top: 0;
+}
+
+#workouts-container .exercise p {
+    margin-bottom: 0;
+}
+
+#workouts-container footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#workouts-container footer p {
+    margin: 0;
+}
