@@ -1,33 +1,33 @@
 function calculateBMI() {
-    var heightInput = document.getElementById("height");
-    var weightInput = document.getElementById("weight");
-    var heightUnit = document.getElementById("heightUnit").value;
-    var weightUnit = document.getElementById("weightUnit").value;
-    var resultContainer = document.getElementById("bmiResult");
+    var system = document.getElementById("system").value;
+    var height, weight;
 
-    var height = parseFloat(heightInput.value);
-    var weight = parseFloat(weightInput.value);
-
-    // valid or no
-    if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
-        resultContainer.textContent = "Please enter valid height and weight values.";
-        return;
+    if (system === "imperial") {
+        var feet = parseFloat(document.getElementById("heightFeet").value);
+        var inches = parseFloat(document.getElementById("heightInches").value);
+        height = (feet * 12 + inches) * 0.0254; // Convert feet and inches to meters
+        weight = parseFloat(document.getElementById("weight").value) * 0.453592; // Convert pounds to kilograms
+    } else {
+        height = parseFloat(document.getElementById("heightCm").value) / 100; // Convert cm to meters
+        weight = parseFloat(document.getElementById("weight").value); // Already in kilograms
     }
 
-    // to metric
-    if (heightUnit === "inches") {
-        height *= 2.54; // Convert inches to centimeters
-    }
-    if (weightUnit === "lbs") {
-        weight *= 0.453592; // Convert pounds to kilograms
-    }
+    var bmi = weight / (height * height);
 
-    // bmi
-    var bmi = weight / ((height / 100) * (height / 100));
-
-    // Display the result
-    resultContainer.textContent = "Your BMI is: " + bmi.toFixed(2);
+    document.getElementById("bmiResult").textContent = "Your BMI is: " + bmi.toFixed(2);
 }
+
+document.getElementById("system").addEventListener("change", function() {
+    var selectedSystem = document.getElementById("system").value;
+    if (selectedSystem === "imperial") {
+        document.getElementById("heightInput").style.display = "block";
+        document.getElementById("heightMetric").style.display = "none";
+    } else {
+        document.getElementById("heightInput").style.display = "none";
+        document.getElementById("heightMetric").style.display = "block";
+    }
+});
+
 
 function calculateCalories() {
     var ageInput = document.getElementById("age");

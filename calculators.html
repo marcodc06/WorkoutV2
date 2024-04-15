@@ -65,24 +65,35 @@
     <section id="bmiCalculator" class="calculator">
         <div class="container">
             <h2>BMI Calculator</h2>
-            <label for="height">Height:</label>
-            <input type="number" id="height" placeholder="Height"><br>
-            <select id="heightUnit">
-                <option value="cm">cm</option>
-                <option value="inches">inches</option>
+            <label for="system">Choose system:</label>
+            <select id="system">
+                <option value="imperial">Imperial</option>
+                <option value="metric">Metric</option>
             </select><br>
+
+            <div id="heightInput">
+                <label for="heightFeet">Height (feet):</label>
+                <input type="number" id="heightFeet" placeholder="Feet"><br>
+                <label for="heightInches">Height (inches):</label>
+                <input type="number" id="heightInches" placeholder="Inches"><br>
+            </div>
+
+            <div id="heightMetric" style="display: none;">
+                <label for="heightCm">Height (cm):</label>
+                <input type="number" id="heightCm" placeholder="cm"><br>
+            </div>
 
             <label for="weight">Weight:</label>
             <input type="number" id="weight" placeholder="Weight"><br>
-            <select id="weightUnit">
-                <option value="kg">kg</option>
-                <option value="lbs">lbs</option>
-            </select><br>
 
             <button onclick="calculateBMI()">Calculate BMI</button>
+            
             <p id="bmiResult"></p>
         </div>
     </section>
+
+    <script src="script.js"></script>
+    
 
     <section id="bmiInfo">
         <div class="container">
