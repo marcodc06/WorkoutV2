@@ -14,13 +14,53 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Recipes</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
                     <li><a href="#">Workouts</a></li>
-                    <li><a href="#">Calculators</a></li>
+                    <li><a href="calculators.html">Calculators</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <section id="calorieCalculator" class="calculator">
+        <div class="container">
+            <h2>Calorie Calculator</h2>
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Age"><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="Height"><br>
+            <select id="heightUnit">
+                <option value="cm">cm</option>
+                <option value="inches">inches</option>
+            </select><br>
+
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" placeholder="Weight"><br>
+            <select id="weightUnit">
+                <option value="kg">kg</option>
+                <option value="lbs">lbs</option>
+            </select><br>
+
+            <label for="activityLevel">Activity Level:</label>
+            <select id="activityLevel">
+                <option value="sedentary">Sedentary (little to no exercise)</option>
+                <option value="lightlyActive">Lightly active (light exercise/sports 1-3 days a week)</option>
+                <option value="moderatelyActive">Moderately active (moderate exercise/sports 3-5 days a week)</option>
+                <option value="veryActive">Very active (hard exercise/sports 6-7 days a week)</option>
+                <option value="extraActive">Extra active (very hard exercise/sports & physical job or 2x training)</option>
+            </select><br>
+
+            <button onclick="calculateCalories()">Calculate Calories</button>
+            <p id="calorieResult"></p>
+        </div>
+    </section>
+
 
     <section id="bmiCalculator" class="calculator">
         <div class="container">
@@ -36,7 +76,7 @@
             <input type="number" id="weight" placeholder="Weight"><br>
             <select id="weightUnit">
                 <option value="kg">kg</option>
-                <option value="pounds">pounds</option>
+                <option value="lbs">lbs</option>
             </select><br>
 
             <button onclick="calculateBMI()">Calculate BMI</button>
