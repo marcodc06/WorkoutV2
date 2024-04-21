@@ -21,78 +21,56 @@
             </nav>
         </div>
     </header>
-    <section id="calorieCalculator" class="calculator">
+    
+    <section id="calorieCalculator">
         <div class="container">
             <h2>Calorie Calculator</h2>
             <label for="age">Age:</label>
             <input type="number" id="age" placeholder="Age"><br>
-
             <label for="gender">Gender:</label>
             <select id="gender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select><br>
-
-            <label for="height">Height:</label>
-            <input type="number" id="height" placeholder="Height"><br>
-            <select id="heightUnit">
-                <option value="cm">cm</option>
-                <option value="inches">inches</option>
-            </select><br>
-
-            <label for="weight">Weight:</label>
-            <input type="number" id="weight" placeholder="Weight"><br>
-            <select id="weightUnit">
-                <option value="kg">kg</option>
-                <option value="lbs">lbs</option>
-            </select><br>
-
+            <label for="feet">Height (feet):</label>
+            <input type="number" id="feet2" placeholder="Feet"><br>
+            <label for="inches">Height (inches):</label>
+            <input type="number" id="inches2" placeholder="Inches"><br>
+            <label for="weight">Weight (lbs):</label>
+            <input type="number" id="weight2" placeholder="Weight (lbs)"><br>
             <label for="activityLevel">Activity Level:</label>
             <select id="activityLevel">
                 <option value="sedentary">Sedentary (little to no exercise)</option>
-                <option value="lightlyActive">Lightly active (light exercise/sports 1-3 days a week)</option>
-                <option value="moderatelyActive">Moderately active (moderate exercise/sports 3-5 days a week)</option>
-                <option value="veryActive">Very active (hard exercise/sports 6-7 days a week)</option>
-                <option value="extraActive">Extra active (very hard exercise/sports & physical job or 2x training)</option>
+                <option value="lightlyActive">Lightly Active (exercise 1-3 days/week)</option>
+                <option value="moderatelyActive">Moderately Active (exercise 3-5 days/week)</option>
+                <option value="veryActive">Very Active (exercise 6-7 days/week)</option>
+                <option value="extraActive">Extra Active (very hard exercise & physical job)</option>
             </select><br>
-
             <button onclick="calculateCalories()">Calculate Calories</button>
+            <button onclick="clearInputs()">Clear</button>
             <p id="calorieResult"></p>
         </div>
     </section>
 
+    <script src="script.js"></script>
 
-    <section id="bmiCalculator" class="calculator">
+    <section id="bmiCalculator">
         <div class="container">
             <h2>BMI Calculator</h2>
-            <label for="system">Choose system:</label>
-            <select id="system">
-                <option value="imperial">Imperial</option>
-                <option value="metric">Metric</option>
-            </select><br>
-
-            <div id="heightInput">
-                <label for="heightFeet">Height (feet):</label>
-                <input type="number" id="heightFeet" placeholder="Feet"><br>
-                <label for="heightInches">Height (inches):</label>
-                <input type="number" id="heightInches" placeholder="Inches"><br>
-            </div>
-
-            <div id="heightMetric" style="display: none;">
-                <label for="heightCm">Height (cm):</label>
-                <input type="number" id="heightCm" placeholder="cm"><br>
-            </div>
-
-            <label for="weight">Weight:</label>
-            <input type="number" id="weight" placeholder="Weight"><br>
-
+            <label for="feet">Height (feet):</label>
+            <input type="number" id="feet" placeholder="Feet"><br>
+            <label for="inches">Height (inches):</label>
+            <input type="number" id="inches" placeholder="Inches"><br>
+            <label for="weight">Weight (lbs):</label>
+            <input type="number" id="weight" placeholder="Weight (lbs)"><br>
             <button onclick="calculateBMI()">Calculate BMI</button>
-            
+            <button onclick="clearInputs()">Clear</button>
             <p id="bmiResult"></p>
         </div>
     </section>
 
     <script src="script.js"></script>
+
     
 
     <section id="bmiInfo">
