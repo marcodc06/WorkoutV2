@@ -1,7 +1,7 @@
 function calculateBMI() {
-    var feet = parseFloat(document.getElementById("feet").value);
-    var inches = parseFloat(document.getElementById("inches").value);
-    var weight = parseFloat(document.getElementById("weight").value);
+    var feet = parseFloat(document.getElementById("bmiFeet").value);
+    var inches = parseFloat(document.getElementById("bmiInches").value);
+    var weight = parseFloat(document.getElementById("bmiWeight").value);
 
     if (isNaN(feet) || isNaN(inches) || isNaN(weight) || feet <= 0 || inches < 0 || weight <= 0) {
         document.getElementById("bmiResult").textContent = "Please enter valid values.";
@@ -13,11 +13,11 @@ function calculateBMI() {
 
     document.getElementById("bmiResult").textContent = "Your BMI is: " + bmi.toFixed(2);
 };
-
+//clear bmi
 function clearInputs() {
-    document.getElementById("feet").value = "";
-    document.getElementById("inches").value = "";
-    document.getElementById("weight").value = "";
+    document.getElementById("bmiFeet").value = "";
+    document.getElementById("bmiInches").value = "";
+    document.getElementById("bmiWeight").value = "";
     document.getElementById("bmiResult").textContent = "";
 }
 
@@ -25,9 +25,9 @@ function clearInputs() {
 function calculateCalories() {
     var age = parseFloat(document.getElementById("age").value);
     var gender = document.getElementById("gender").value;
-    var feet = parseFloat(document.getElementById("feet2").value);
-    var inches = parseFloat(document.getElementById("inches2").value);
-    var weight = parseFloat(document.getElementById("weight2").value);
+    var feet = parseFloat(document.getElementById("calFeet").value);
+    var inches = parseFloat(document.getElementById("calInches").value);
+    var weight = parseFloat(document.getElementById("calWeight").value);
     var activityLevel = document.getElementById("activityLevel").value;
 
     if (isNaN(age) || isNaN(feet) || isNaN(inches) || isNaN(weight)) {
@@ -56,29 +56,32 @@ function calculateCalories() {
         tdee = bmr * 1.9;
     }
 
-    var calorieEstimates = {
-        "Maintain weight": tdee.toFixed(0),
-        "Mild weight loss (0.5 lb/week)": (tdee * 0.9).toFixed(0),
-        "Weight loss (1 lb/week)": (tdee * 0.8).toFixed(0),
-        "Extreme weight loss (2 lb/week)": (tdee * 0.61).toFixed(0),
-        "Mild weight gain (0.5 lb/week)": (tdee * 1.1).toFixed(0),
-        "Weight gain (1 lb/week)": (tdee * 1.2).toFixed(0),
-        "Fast weight gain (2 lb/week)": (tdee * 1.39).toFixed(0)
-    };
+var maintainWeight = tdee.toFixed(0);
+var mildWeightLoss = (tdee * 0.9).toFixed(0);
+var weightLoss = (tdee * 0.8).toFixed(0);
+var extremeWeightLoss = (tdee * 0.61).toFixed(0);
+var mildWeightGain = (tdee * 1.1).toFixed(0);
+var weightGain = (tdee * 1.2).toFixed(0);
+var fastWeightGain = (tdee * 1.39).toFixed(0);
 
-    var calorieResults = "Calorie Estimates (Calories/day):\n";
-    for (var estimate in calorieEstimates) {
-        calorieResults += estimate + ": " + calorieEstimates[estimate] + "\n";
-    }
+var calorieResults = `
+    Maintain weight: ${maintainWeight}<br>
+    Mild weight loss (0.5 lb/week): ${mildWeightLoss}<br>
+    Weight loss (1 lb/week): ${weightLoss}<br>
+    Extreme weight loss (2 lb/week): ${extremeWeightLoss}<br>
+    Mild weight gain (0.5 lb/week): ${mildWeightGain}<br>
+    Weight gain (1 lb/week): ${weightGain}<br>
+    Fast weight gain (2 lb/week): ${fastWeightGain}
+`;
 
-    document.getElementById("calorieResult").textContent = calorieResults;
+document.getElementById("calorieResult").innerHTML = calorieResults;
 }
 function clearInputs() {
     document.getElementById("age").value = "";
     document.getElementById("gender").value = "male";
-    document.getElementById("feet2").value = "";
-    document.getElementById("inches2").value = "";
-    document.getElementById("weight2").value = "";
+    document.getElementById("calFeet").value = "";
+    document.getElementById("calInches").value = "";
+    document.getElementById("calWeight").value = "";
     document.getElementById("activityLevel").value = "sedentary";
     document.getElementById("calorieResult").textContent = "";
 }
