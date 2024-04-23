@@ -25,21 +25,21 @@
     <section id="calorieCalculator">
         <div class="container">
             <h2>Calorie Calculator</h2>
-            <label for="age">Age:</label>
-            <input type="number" id="age" placeholder="Age"><br>
-            <label for="gender">Gender:</label>
-            <select id="gender">
+            <label for="calAge">Age:</label>
+            <input type="number" id="calAge" placeholder="Age"><br>
+            <label for="calGender">Gender:</label>
+            <select id="calGender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select><br>
-            <label for="feet">Height (feet):</label>
+            <label for="calFeet">Height (feet):</label>
             <input type="number" id="calFeet" placeholder="Feet"><br>
-            <label for="inches">Height (inches):</label>
+            <label for="calInches">Height (inches):</label>
             <input type="number" id="calInches" placeholder="Inches"><br>
-            <label for="weight">Weight (lbs):</label>
+            <label for="calWeight">Weight (lbs):</label>
             <input type="number" id="calWeight" placeholder="Weight (lbs)"><br>
-            <label for="activityLevel">Activity Level:</label>
-            <select id="activityLevel">
+            <label for="calActivityLevel">Activity Level:</label>
+            <select id="calActivityLevel">
                 <option value="sedentary">Sedentary (little to no exercise)</option>
                 <option value="lightlyActive">Lightly Active (exercise 1-3 days/week)</option>
                 <option value="moderatelyActive">Moderately Active (exercise 3-5 days/week)</option>
@@ -47,45 +47,87 @@
                 <option value="extraActive">Extra Active (very hard exercise & physical job)</option>
             </select><br>
             <button onclick="calculateCalories()">Calculate Calories</button>
-            <button onclick="clearInputs()">Clear</button>
+            <button onclick="clearCalInputs()">Clear</button>
             <p id="calorieResult"></p>
+            
+            <!-- calorie info -->
+            <div id="calorieInfo">
+                <h3>About Calorie Calculation</h3>
+                <p>Total Daily Energy Expenditure (TDEE) is the estimated number of calories you burn in a day. It includes calories burned through activities, exercise, and basic bodily functions.</p>
+                <p>Choosing the right activity level is crucial for accurate calorie estimation. Be honest about your activity level to get the best results.</p>
+                <p>The calorie estimates provided below can help you maintain, gain, or lose weight based on your goals and activity level.</p>
+            </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="proteinCalculator">
+        <div class="container">
+            <h2>Protein Calculator</h2>
+            <label for="proAge">Age:</label>
+            <input type="number" id="proAge" placeholder="Age"><br>
+            <label for="proGender">Gender:</label>
+            <select id="proGender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <label for="proHeightFeet">Height:</label>
+            <input type="number" id="proHeightFeet" placeholder="Feet">
+            <input type="number" id="proHeightInches" placeholder="Inches"><br>
+            <label for="proWeight">Weight (lbs):</label>
+            <input type="number" id="proWeight" placeholder="Weight (lbs)"><br>
+            <label for="proActivityLevel">Activity Level:</label>
+            <select id="proActivityLevel">
+                <option value="sedentary">Sedentary (little to no exercise)</option>
+                <option value="lightlyActive">Lightly Active (exercise 1-3 days/week)</option>
+                <option value="moderatelyActive">Moderately Active (exercise 3-5 days/week)</option>
+                <option value="veryActive">Very Active (exercise 6-7 days/week)</option>
+                <option value="extraActive">Extra Active (very hard exercise & physical job)</option>
+            </select><br>
+            <button onclick="calculateProtein()">Calculate Protein</button>
+            <button onclick="clearProInputs()">Clear</button>
+            <div id="proteinResults"></div>
+            
+            <!-- information section for proten-->
+            <div id="proteinInfo">
+                <h3>About Protein Requirements</h3>
+                <p>Protein is essential for muscle repair, growth, and overall health. Calculating your protein requirements can help you achieve your fitness goals effectively.</p>
+                <p>The protein estimates provided below can guide you in meeting your muscle-building, fat-loss, or weight maintenance objectives based on your activity level and gender.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
 
     <section id="bmiCalculator">
         <div class="container">
             <h2>BMI Calculator</h2>
-            <label for="feet">Height (feet):</label>
+            <label for="bmiFeet">Height (feet):</label>
             <input type="number" id="bmiFeet" placeholder="Feet"><br>
-            <label for="inches">Height (inches):</label>
+            <label for="bmiInches">Height (inches):</label>
             <input type="number" id="bmiInches" placeholder="Inches"><br>
-            <label for="weight">Weight (lbs):</label>
+            <label for="bmiWeight">Weight (lbs):</label>
             <input type="number" id="bmiWeight" placeholder="Weight (lbs)"><br>
+            <label for="bmiGender">Gender:</label>
+            <select id="bmiGender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
             <button onclick="calculateBMI()">Calculate BMI</button>
-            <button onclick="clearInputs()">Clear</button>
+            <button onclick="clearBmiInputs()">Clear</button>
             <p id="bmiResult"></p>
+            
+            <!-- bmi information section -->
+            <div id="bmiInfo">
+                <h3>About BMI</h3>
+                <p>Body Mass Index (BMI) is a measure of body fat based on height and weight. It is commonly used to assess whether someone has a healthy body weight for their height.</p>
+                <p>The BMI results can help you determine if you are underweight, normal weight, overweight, or obese based on established BMI ranges.</p>
+            </div>
         </div>
     </section>
-
-    <script src="script.js"></script>
-
     
-
-    <section id="bmiInfo">
-        <div class="container">
-            <h2>About BMI</h2>
-            <p>Body Mass Index (BMI) is a measure of body fat based on height and weight. It is commonly used to assess whether someone has a healthy body weight for their height. BMI is calculated by dividing weight in kilograms by the square of height in meters (BMI = weight / (height * height)).</p>
-            <p>Healthy BMI ranges:</p>
-            <ul>
-                <li>Underweight: BMI less than 18.5</li>
-                <li>Normal weight: BMI 18.5 - 24.9</li>
-                <li>Overweight: BMI 25 - 29.9</li>
-                <li>Obesity: BMI 30 or greater</li>
-            </ul>
-        </div>
-    </section>
 
     <footer>
         <div class="container">
