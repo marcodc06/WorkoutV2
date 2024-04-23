@@ -1,0 +1,167 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* global*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #e61d1d;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px 0;
+}
+
+footer {
+    background-color: #e61d1d;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* workouts page */
+#workouts-container .muscle-group {
+    margin-bottom: 30px;
+}
+
+#workouts-container h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#workouts-container .exercise {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#workouts-container .exercise h4 {
+    margin-top: 0;
+}
+
+#workouts-container .exercise p {
+    margin-bottom: 0;
+}
+
+#workouts-container footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#workouts-container footer p {
+    margin: 0;
+}
+
+/* featured content */
+.featured-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.feature h2 {
+    color: #333;
+}
+
+.feature p {
+    color: #666;
+}
+
+.feature a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e61d1d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* benefits secton */
+.benefits {
+    margin-top: 50px;
+    text-align: center; 
+}
+
+.benefit {
+    margin-bottom: 30px;
+}
+
+.benefit h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    color: #666;
+}
+
+/* gen Information */
+.general-info {
+    margin-top: 50px;
+}
+
+.general-info .container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.general-info h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.general-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.general-info ul {
+    margin-top: 10px;
+}
+
+.general-info ul li {
+    color: #333;
+    margin-bottom: 10px;
+}
