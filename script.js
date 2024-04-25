@@ -151,21 +151,6 @@ function clearProInputs() {
 
 
 
-    // // Calculate calorie intake for weight loss or weight gain based on user's goal
-    // var calorieIntake;
-    // switch (goalInput.value) {
-    //     case "loseWeight":
-    //         calorieIntake = tdee - 500; // Aim for 500 calorie deficit for weight loss
-    //         break;
-    //     case "gainWeight":
-    //         calorieIntake = tdee + 500; // Aim for 500 calorie surplus for weight gain
-    //         break;
-    //     default:
-    //         calorieIntake = tdee; // Maintain current weight if no goal is selected
-    //         break;
-    // }
 
-    // // Display the result
-    // resultContainer.textContent = "Your estimated daily calorie intake is: " + Math.round(calorieIntake) + " calories";
 
 
